@@ -37,7 +37,11 @@ module.exports = function(sequelize, DataTypes) {
 
       }
 
+    },
+    name: {
+      type: DataTypes.STRING
     }
+
   }, {
     classMethods: {
       associate: function(models) {
