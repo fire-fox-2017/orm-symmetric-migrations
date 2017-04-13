@@ -7,35 +7,35 @@ module.exports = function(sequelize, DataTypes) {
     birth_date: DataTypes.DATE,
     email: {
       type: DataTypes.TEXT,
-      // validate: {
-      //   isEmail: true,
-      //   isUnique: (value, next) => {
-      //     // let self = this
-      //     Student.find({
-      //       where : { email : value }
-      //     }).then((student) => {
-      //       if(student) {
-      //         return next('Email sudah digunakan !')
-      //       } else{
-      //         return next()
-      //       }
-      //     }).catch((err) => {
-      //       return next(err.message)
-      //     })
-      //   }
-      // }
+      validate: {
+        isEmail: true,
+        isUnique: (value, next) => {
+          // let self = this
+          Student.find({
+            where : { email : value }
+          }).then((student) => {
+            if(student) {
+              return next('Email sudah digunakan !')
+            } else{
+              return next()
+            }
+          }).catch((err) => {
+            return next(err.message)
+          })
+        }
+      }
     },
     tinggi_badan: {
       type: DataTypes.INTEGER,
-      // validate: {min : 150, isNumeric : true}
+      validate: {min : 150, isNumeric : true}
     },
     phone: {
       type: DataTypes.INTEGER,
-      // validate: {
-      //   len: [9, 13],
-      //   isAlphanumeric : false,
-      //   isNumeric: true
-      // }
+      validate: {
+        len: [9, 13],
+        isAlphanumeric : false,
+        isNumeric: true
+      }
     }
   }, {
     classMethods: {

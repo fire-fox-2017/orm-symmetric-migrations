@@ -1,18 +1,19 @@
 "use strict"
 const db = require('./models')
 
-// db.Student.create({
-//   first_name: 'giri',
-//   last_name: 'putri',
-//   birth_date: '1994-09-23',
-//   email: 'giri@gamil.com',
-//   tinggi_badan: '175',
-//   phone: '08888766712',
-// }).then((student) => {
-//   console.log(`${student.first_name} berhasil ditambah`);
-// }).catch((err) => {
-//   console.log(err.message);
-// })
+db.Student.create({
+  name: 'giri putri'
+  // first_name: 'giri',
+  // last_name: 'putri',
+  birth_date: '1994-09-23',
+  email: 'giri@gamil.com',
+  tinggi_badan: '175',
+  phone: '08888766712',
+}).then((student) => {
+  console.log(`${student.first_name} berhasil ditambah`);
+}).catch((err) => {
+  console.log(err.message);
+})
 
 // db.Student.getAllData((records) => {
 //   // console.log(records);
