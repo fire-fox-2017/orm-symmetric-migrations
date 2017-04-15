@@ -6,7 +6,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "sequelize": "^3.21.0",
+    "sequelize": "^3.30.4",
     "sequelize-cli": "^2.3.1",
     "sqlite3": "^3.1.3"
   },
