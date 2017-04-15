@@ -18,6 +18,7 @@ module.exports = {
       height: 180,
       email: "john_doe@people.com",
       phone: "12345678910",
+      address: "somewhere",
       createdAt: Date.now(),
       updatedAt: Date.now()},
       {
@@ -26,6 +27,7 @@ module.exports = {
         height: 168,
         email: "jane_doe@people.com",
         phone: "12398765432",
+        address: "somewhere",
         createdAt: Date.now(),
         updatedAt: Date.now()}
       ]);
@@ -39,5 +41,6 @@ module.exports = {
       Example:
       return queryInterface.bulkDelete('Person', null, {});
     */
+    return queryInterface.bulkDelete('Students', null);
   }
 };
