@@ -55,6 +55,9 @@ module.exports = function(sequelize, DataTypes) {
         min:150
       }
     },
+    name:{
+       type: DataTypes.STRING
+     },
   }, {
     classMethods: {
       associate: function(models) {
@@ -64,6 +67,14 @@ module.exports = function(sequelize, DataTypes) {
         Student.findAll().then(function(students) {
           callback(students);
         });   
+      },
+      insertFullName: function(callback) {
+        Student.findAll().then(function(students) {
+          students.forEach((student)=> {
+            student.setDataValue('name', student.getFullName());
+          })
+          callback(students);
+        });
       }
     },
     instanceMethods: {
