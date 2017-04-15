@@ -25,9 +25,9 @@ module.exports = {
       return queryInterface.dropTable('users');
     */
     return [
-      queryInterface.removeColumn({tableName:'Student', schema:'public'}, 'Height'),
-      queryInterface.removeColumn({tableName:'Student', schema:'public'}, 'Phone'),
-      queryInterface.removeColumn({tableName:'Student', schema:'public'}, 'Email')
+      queryInterface.removeColumn({tableName:'Students', schema:'public'}, 'Height'),
+      queryInterface.removeColumn({tableName:'Students', schema:'public'}, 'Phone'),
+      queryInterface.removeColumn({tableName:'Students', schema:'public'}, 'Email')
     ]
   }
 };
