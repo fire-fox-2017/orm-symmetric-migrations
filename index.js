@@ -6,13 +6,10 @@ var db = require('./models');
 
 let replServer = repl.start({prompt : '>'});
 
-let insertStudent = (firstname, lastname, birthdate, emails, tinggi, phone) => {
+let insertStudent = (firstname, lastname, birthdate) => {
   db.Student.create({'firstname' : firstname,
                      'lastname' : lastname,
-                     'birthdate' : birthdate,
-                     'emails' : emails,
-                     'tinggi' : tinggi,
-                     'phone' : phone})
+                     'birthdate' : birthdate})
   .then(student => {
     console.log(JSON.stringify(student.toJSON()), null, 2);
   })

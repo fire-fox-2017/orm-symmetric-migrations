@@ -12,17 +12,16 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
-
     return queryInterface.bulkInsert('Students', [{
       firstname: 'John',
       lastname: 'Doe',
-      birthdate: '03-08-1973',
+      birthdate: '1987-03-10',
       createdAt: new Date(),
       updatedAt: new Date()
     },{
       firstname: 'Ilham',
       lastname: 'H',
-      birthdate: '03-08-1983',
+      birthdate: '1909-7-18',
       createdAt: new Date(),
       updatedAt: new Date()
     }], {});

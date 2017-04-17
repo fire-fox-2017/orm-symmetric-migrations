@@ -8,18 +8,11 @@ module.exports = {
 
       Example:
       return queryInterface.createTable('users', { id: Sequelize.INTEGER });
-
     */
     return [
       queryInterface.addColumn(
         'Students',
         'name', {
-          type: Sequelize.STRING
-        }
-      ),
-      queryInterface.addColumn(
-        'Students',
-        'address', {
           type: Sequelize.STRING
         }
       )
