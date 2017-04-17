@@ -17,15 +17,30 @@ module.exports = {
 
     console.log("test");
 
-    db.Student.findAll()
-    .then ( students => {
-      console.log("lalal")
-      console.log(students);
-      students.forEach (student => {
-        console.log(JSON.stringify(student.toJSON()));
-      })
-    })
+    // db.Student.findAll()
+    // .then ( students => {
+    //   console.log("lalal")
+    //   console.log(students);
+    //   students.forEach (student => {
+    //     console.log(JSON.stringify(student.toJSON()));
 
+    //   })
+    // })
+
+
+// queryInterface.query("SELECT * FROM `students`", { type: Sequelize.QueryTypes.SELECT})
+//   .then(function(students) {
+//     // We don't need spread here, since only the results will be returned for select queries
+//       students.forEach (student => {
+//         console.log(JSON.stringify(student.toJSON()));
+
+//       })
+//   })
+
+  // queryInterface.bulkUpdate('students', {name: field['']})
+
+
+  console.log("end");
     // db.Student.getAllData( students => {
     //   console.log("haha")
     //   students.forEach (student => {
