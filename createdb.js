@@ -5,4 +5,3 @@ fs.open('db/students.db', 'wx', function (err, fd) {
     // console.error("Ooopps, something happen! ", err)
   })
 })
-
